@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_package = "com.hotel.roominventory.grpc";
+option java_multiple_files = true;
+
+// List of methods
+service RoomInventory {
+  rpc ListAvailableRooms (DateRange) returns (RoomList);
+  rpc ReserveRoom (RoomRequest) returns (RequestResponse);
+  rpc ReleaseRoom (RoomRequest) returns (RequestResponse);
+}
+
+// Messages
+// Date range defined by two dates
+message DateRange {
+  string checkIn = 1;
+  string checkOut = 2;
+}
+
+// Room
+message Room {
+  int64 id = 1;
+  string type = 2;
+  double price = 3;
+}
+
+// List of Rooms
+message RoomList {
+  repeated Room rooms = 1;
+}
+
+// To be used for a reservation or the release of a room
+message RoomRequest {
+  int64 roomId = 1;
+  DateRange dateRange = 2;
+}
+
+// Reponse of the use of a RoomRequest
+message RequestResponse {
+  bool success = 1;
+  string message = 2;
+}
