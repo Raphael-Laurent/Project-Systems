@@ -1,0 +1,2 @@
+rootProject.name = 'project-systems'
+include 'room-inventory-service', 'booking-service'
