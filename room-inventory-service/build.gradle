@@ -1,4 +1,4 @@
-// room-inventory-service/build.gradle
+
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '4.1.1'
@@ -22,11 +22,9 @@ repositories {
 def grpcVersion = '1.83.1'
 
 dependencies {
-	// JPA + H2
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'com.h2database:h2'
 
-	// gRPC (serveur)
 	implementation "io.grpc:grpc-netty-shaded:${grpcVersion}"
 	implementation "io.grpc:grpc-protobuf:${grpcVersion}"
 	implementation "io.grpc:grpc-stub:${grpcVersion}"
@@ -37,7 +35,6 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-// Génération du code Java à partir du .proto
 protobuf {
 	protoc { artifact = 'com.google.protobuf:protoc:3.25.5' }
 	plugins {
@@ -48,7 +45,6 @@ protobuf {
 	}
 }
 
-// Le .proto est dans le dossier partagé ../proto
 sourceSets {
 	main {
 		proto {

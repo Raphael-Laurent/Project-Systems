@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-// Démarre le serveur gRPC au lancement de l'app Spring et l'arrête proprement à la fin
 @Component
 public class GrpcServerRunner {
 
@@ -37,7 +36,6 @@ public class GrpcServerRunner {
                 .start();
         logger.info("gRPC server started on port {}", port);
 
-        // Thread non-daemon : garde l'application en vie tant que le serveur tourne
         Thread awaitThread = new Thread(() -> {
             try {
                 server.awaitTermination();
