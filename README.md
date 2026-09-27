@@ -3,7 +3,6 @@
 Projet réalisé dans le cadre du cours OO Systems Development à l'Efrei.
 Application de réservation d'hôtel construite avec deux microservices Spring Boot communiquant en **REST** et **gRPC**, chacun avec sa propre base **H2**.
 
-
 ## Lien Github
 
 https://github.com/Raphael-Laurent/Project-Systems.git
@@ -92,9 +91,9 @@ cd booking-service
 ## Client JavaFX
 
 `javafx-client/` est une interface qui permet trois actions :
-- **Chercher les chambres disponibles** : `Get /rooms/available`, affiche la liste des chambres disponibles avec les dates saisies
+- **Chercher les chambres disponibles** : `Get /rooms/available`, affiche la liste des chambres disponibles avec les dates saisies. Les chambres sont affichées sous forme de tableau avec leur id, leur type, et le coût total du séjour.
 - **Réserver** : `POST /bookings`, l'utilisateur renseigne son nom et l'id de la chambre, et une réservation est créée dans les dates entrées auparavant. La réservation s'affiche dans le log où l'utilisateur peut voir son id.
-- **Annuler une réservation** : `DELETE /bookings/{id}`, l'utilisateur entre l'id du booking qu'il souhaite annulé
+- **Annuler une réservation** : `DELETE /bookings/{id}`, l'utilisateur entre l'id du booking qu'il souhaite annulé.
 
 Les erreurs serveurs et les réussites s'affichent dans le log de l'app, dans le bas de la fenêtre.
 
