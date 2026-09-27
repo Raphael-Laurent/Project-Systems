@@ -25,6 +25,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/booking-service" />
+            <option value="$PROJECT_DIR$/javafx-client" />
             <option value="$PROJECT_DIR$/room-inventory-service" />
           </set>
         </option>
