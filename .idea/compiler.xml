@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="project-systems.booking-service" target="17" />
+      <module name="project-systems.booking-service.main" target="17" />
+      <module name="project-systems.booking-service.test" target="17" />
+      <module name="project-systems.room-inventory-service" target="17" />
+      <module name="project-systems.room-inventory-service.main" target="17" />
+      <module name="project-systems.room-inventory-service.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="booking" options="-parameters" />
+      <module name="booking.main" options="-parameters" />
+      <module name="booking.test" options="-parameters" />
+      <module name="inventory" options="-parameters" />
+      <module name="inventory.main" options="-parameters" />
+      <module name="inventory.test" options="-parameters" />
+      <module name="project-systems.booking-service" options="-parameters" />
+      <module name="project-systems.booking-service.main" options="-parameters" />
+      <module name="project-systems.booking-service.test" options="-parameters" />
+      <module name="project-systems.room-inventory-service" options="-parameters" />
+      <module name="project-systems.room-inventory-service.main" options="-parameters" />
+      <module name="project-systems.room-inventory-service.test" options="-parameters" />
+    </option>
+  </component>
+</project>
