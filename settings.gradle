@@ -1,2 +1,4 @@
 rootProject.name = 'project-systems'
-include 'room-inventory-service', 'booking-service'
+
+includeBuild 'booking-service'
+includeBuild 'room-inventory-service'

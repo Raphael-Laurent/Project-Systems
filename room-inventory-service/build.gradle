@@ -41,3 +41,12 @@ protobuf {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// booking-service/build.gradle ET room-inventory-service/build.gradle (à ajouter à la fin)
+sourceSets {
+	main {
+		proto {
+			srcDir '../proto'
+		}
+	}
+}
