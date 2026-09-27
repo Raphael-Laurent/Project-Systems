@@ -3,6 +3,11 @@
 Projet réalisé dans le cadre du cours OO Systems Development à l'Efrei.
 Application de réservation d'hôtel construite avec deux microservices Spring Boot communiquant en **REST** et **gRPC**, chacun avec sa propre base **H2**.
 
+
+## Lien Github
+
+https://github.com/Raphael-Laurent/Project-Systems.git
+
 ## Architecture
 
 ```text
@@ -22,7 +27,7 @@ booking-service <-- API REST
 - **`booking-service`** : service REST, point d'entrée du client, gère les réservations (création, consultation, annulation)
 - **`room-inventory-service`** : service gRPC, vérification et réservation des chambres (types, prix et disponibilités des chambres)
 - **`proto`** : contrat gRPC entre les deux services
-- **`javafx/`** : interface client
+- **`javafx-client/`** : interface client desktop
 
 Chaque service contient sa propre base de donnée (H2) pour séparer les responsabilités des deux microservices.
 
@@ -32,7 +37,7 @@ Chaque service contient sa propre base de donnée (H2) pour séparer les respons
 proto/                      contrat .proto
 booking-service/            API REST + client gRPC
 room-inventory-service/     serveur gRPC
-javafx/                     client desktop
+javafx-client/                     client desktop
 ```
 
 Chaque service suit une architecture en couches :
@@ -82,6 +87,22 @@ Dans un autre terminal, démarrer l'API REST
 ```bash
 cd booking-service
 ./gradlew.bat bootRun
+```
+
+## Client JavaFX
+
+`javafx-client/` est une interface qui permet trois actions :
+- **Chercher les chambres disponibles** : `Get /rooms/available`, affiche la liste des chambres disponibles avec les dates saisies
+- **Réserver** : `POST /bookings`, l'utilisateur renseigne son nom et l'id de la chambre, et une réservation est créée dans les dates entrées auparavant. La réservation s'affiche dans le log où l'utilisateur peut voir son id.
+- **Annuler une réservation** : `DELETE /bookings/{id}`, l'utilisateur entre l'id du booking qu'il souhaite annulé
+
+Les erreurs serveurs et les réussites s'affichent dans le log de l'app, dans le bas de la fenêtre.
+
+Les deux services doivent déjà tourner avant de lancer le client :
+
+```bash
+cd javafx-client
+./gradlew.bat run
 ```
 
 ## Equipe
