@@ -105,5 +105,5 @@ cd javafx-client
 ```
 
 ## Equipe
-- Arnaud LABERNARDIERE
+- Armand LABERNARDIERE
 - Raphaël LAURENT
