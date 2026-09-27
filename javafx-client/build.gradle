@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "21"
+    modules = ['javafx.controls']
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
+}
+
+
+application {
+    mainClass = 'com.hotelclient.MainApp'
+}

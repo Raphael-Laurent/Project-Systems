@@ -2,3 +2,4 @@ rootProject.name = 'project-systems'
 
 includeBuild 'booking-service'
 includeBuild 'room-inventory-service'
+include 'javafx-client'
