@@ -69,7 +69,7 @@ public class RoomInventoryServiceImpl implements RoomInventoryService {
         logger.info("Room {} released from {} to {}", roomId, checkIn, checkOut);
     }
 
-    // Prix total du séjour = nombre de nuits x prix par nuit du type de chambre
+
     @Override
     public double computePrice(Room room, LocalDate checkIn, LocalDate checkOut) {
         long nights = ChronoUnit.DAYS.between(checkIn, checkOut);

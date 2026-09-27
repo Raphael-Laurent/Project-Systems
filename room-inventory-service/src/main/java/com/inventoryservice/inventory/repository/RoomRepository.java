@@ -10,7 +10,6 @@ import java.util.List;
 
 public interface RoomRepository extends CrudRepository<Room, Long> {
 
-    // Chambres sans aucune réservation qui chevauche [checkIn, checkOut[
     @Query("SELECT r FROM Room r WHERE r.id NOT IN (" +
             "SELECT res.room.id FROM RoomReservation res " +
             "WHERE res.checkIn < :checkOut AND res.checkOut > :checkIn)")
